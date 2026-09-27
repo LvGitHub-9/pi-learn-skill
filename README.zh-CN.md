@@ -201,13 +201,17 @@ $LEARN_ROOT/
 
 ## 安装
 
-把 skill 目录复制到 pi 会扫描的位置：
+装到 pi 会扫描的目录里。**克隆时要把目录命名成 `learn`** —— Agent Skills 规范期望
+目录名与 skill 的 `name` 一致。
 
 ```bash
 # 用户级
-cp -r learn ~/.pi/skills/
+git clone https://github.com/LvGitHub-9/pi-learn-skill.git ~/.pi/skills/learn
 # 或项目级
-cp -r learn .pi/skills/
+git clone https://github.com/LvGitHub-9/pi-learn-skill.git .pi/skills/learn
+
+# 或者直接拷贝已有目录
+cp -r learn ~/.pi/skills/learn
 ```
 
 然后在活动会话里 `/reload`，或重启 pi。用 `/skill:learn` 验证。

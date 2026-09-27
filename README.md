@@ -216,13 +216,17 @@ directory wins; otherwise the default `~/.pi/learn/` is used. Nothing is hard-co
 
 ## Install
 
-Copy the skill directory into a location pi scans for skills:
+Install into a directory pi scans for skills. **Clone into a directory named
+`learn`** — the Agent Skills spec expects the directory to match the skill's `name`.
 
 ```bash
 # user-level
-cp -r learn ~/.pi/skills/
+git clone https://github.com/LvGitHub-9/pi-learn-skill.git ~/.pi/skills/learn
 # or project-level
-cp -r learn .pi/skills/
+git clone https://github.com/LvGitHub-9/pi-learn-skill.git .pi/skills/learn
+
+# or copy an existing checkout
+cp -r learn ~/.pi/skills/learn
 ```
 
 Then `/reload` in an active session, or restart pi. Verify with `/skill:learn`.
