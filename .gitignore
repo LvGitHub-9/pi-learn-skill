@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local learner data — must NOT match assets/learner.md, so anchor to repo root.
+/data/
+/learner.md
+
+# Ephemeral extraction output from prep mode
+**/_extracted/
+
+# Scratch
+*.tmp
+*.log
