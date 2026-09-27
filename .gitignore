@@ -11,7 +11,11 @@ venv/
 Thumbs.db
 desktop.ini
 
-# Local learner data — must NOT match assets/learner.md, so anchor to repo root.
+# Local configuration: the absolute data root for this installation.
+.learn-root
+
+# Local learner data, if someone keeps it inside the skill directory.
+# Anchored so it cannot accidentally ignore assets/learner.md.
 /data/
 /learner.md
 

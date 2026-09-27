@@ -197,16 +197,20 @@ learn/
     └── due.py                # picks due cards out of cards.md (stdlib only)
 ```
 
-Learner data is written **outside** this repo, to `data/learning/`:
+Learner data is written **outside** this repo, under a single configurable root
+(`$LEARN_ROOT`):
 
 ```
-data/learning/
+$LEARN_ROOT/
 ├── learner.md                        # global profile (shared across subjects)
 └── <subject>/
     ├── goal.md  map.md  cards.md
     ├── source/<material>.lesson.md   # prep output
     └── log/YYYY-MM-DD.md             # one per session
 ```
+
+The root is resolved at the start of every session: a `.learn-root` file in the skill
+directory wins; otherwise the default `~/.pi/learn/` is used. Nothing is hard-coded.
 
 ---
 
@@ -290,8 +294,8 @@ Being specific about this matters more than the successes:
 
 Recorded in `SKILL.md` so future sessions don't rediscover them:
 
-- **No skill/practice mode.** Singing, tuning a control loop, debugging hardware are
-  *procedural* — they need repetition and immediate sensory feedback, not retrieval.
+- **No skill/practice mode.** Singing, playing an instrument, motor skills and other
+  *procedural* abilities need repetition and immediate sensory feedback, not retrieval.
   Restating a pitch is meaningless; you have to sing it. The current loop is
   knowledge-only.
 - **No lightweight session path.** A session currently reads 5+ files. Fine for the
