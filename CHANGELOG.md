@@ -1,5 +1,11 @@
-# v1.0.0
+# Changelog
 
+All notable changes to this project are documented here.
+Format loosely follows [Keep a Changelog](https://keepachangelog.com/); this project adheres to [Semantic Versioning](https://semver.org/).
+
+---
+
+## [1.0.0] — 2026-09-27
 **An AI tutor that is not allowed to explain first.**
 
 一个**不允许先讲解**的 AI 导师。它逼你先输出，然后测你，然后把复习排进日程。
